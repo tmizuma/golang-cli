@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "/Users/tamizuma/dev/golang-cli/main.go",
+      "env": {},
+      "args": []
+    }
+  ]
+}
