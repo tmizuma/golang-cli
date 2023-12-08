@@ -16,3 +16,6 @@ touch /Users/tamizuma/Desktop/f1/0008.png
 touch /Users/tamizuma/Desktop/f1/0009.png
 
 go run main.go format -inputFolder /Users/tamizuma/Desktop/f1 -outputFolder /Users/tamizuma/Desktop/f2 -chunkSize 3
+
+touch /Users/tamizuma/Desktop/hoge.txt
+go run main.go del -path /Users/tamizuma/Desktop/hoge.txt
