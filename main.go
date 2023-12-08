@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"flag"
+	delCmd "golang-cli/delcmd"
 	"golang-cli/formatcmd"
 	"golang-cli/printcmd"
 	"os"
@@ -16,6 +17,7 @@ func main() {
 	subcommands.Register(subcommands.CommandsCommand(), "")
 	subcommands.Register(&printcmd.PrintCmd{}, "")
 	subcommands.Register(&formatcmd.FormatCmd{}, "")
+	subcommands.Register(&delCmd.DelCmd{}, "")
 
 	flag.Parse()
 	ctx := context.Background()
