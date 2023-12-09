@@ -33,6 +33,10 @@ func (o OSFileOperator) Stat(name string) (fs.FileInfo, error) {
 	return os.Stat(name)
 }
 
+func (o OSFileOperator) Mkdir(path string) error {
+	return os.Mkdir(path, 0755)
+}
+
 func (d *DelCmd) SetFlags(f *flag.FlagSet) {
 	f.StringVar(&d.path, "path", "", "delete path")
 }
