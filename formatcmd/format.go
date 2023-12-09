@@ -47,6 +47,10 @@ func (p *FormatCmd) Execute(_ context.Context, f *flag.FlagSet, _ ...interface{}
 		return subcommands.ExitFailure
 	}
 
-	mvPath(fileTransferInfo, p.outputFolder)
+	err = mvPath(fileTransferInfo, p.outputFolder)
+	if err != nil {
+		log.Fatal(err)
+		return subcommands.ExitFailure
+	}
 	return subcommands.ExitSuccess
 }

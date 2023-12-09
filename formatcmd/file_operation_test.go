@@ -26,7 +26,7 @@ func TestCreateNewFileInfoSuccess(t *testing.T) {
 		MockFileObj{"00008.png"},
 		MockFileObj{"00009.png"},
 	}
-	path := "/example/path"
+	path := "\\example\\path"
 	chunkSize := 3
 	newPathIndex := 10
 
@@ -46,7 +46,7 @@ func TestCreateNewFileInfoSuccess(t *testing.T) {
 			t.Errorf("Expected destination folder name to be %s, got: %s", actualDestinationFolderName, info.DestinationFolderName)
 		}
 
-		actualCurrentFilePath := path + "/" + ("0000" + strconv.Itoa(i+1)) + IMG_FILE_EXT
+		actualCurrentFilePath := path + "\\" + ("0000" + strconv.Itoa(i+1)) + IMG_FILE_EXT
 		if info.CurrentFilePath != actualCurrentFilePath {
 			t.Errorf("Expected current file path to be %s, got: %s", actualCurrentFilePath, info.CurrentFilePath)
 		}
